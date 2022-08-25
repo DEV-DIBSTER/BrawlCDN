@@ -2,6 +2,9 @@
 
 Simple Content Delivery Network that will contain all Brawl Stars Assets. Sources will be in game files, as well as the official Fankit & Socials.
 
+## Credits
+
+[Tweenky](https://github.com/heliocosta1337) for the backend CDN.
 
 ## Sources
 
