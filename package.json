@@ -1,0 +1,29 @@
+{
+  "name": "dibster-brawlcdn",
+  "version": "1.0.0",
+  "description": "Open Source Brawl Stars Assets CDN.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "2": "node scripts/GetBrawlStatsCDN.js",
+    "1": "node scripts/RemoveDuplicates.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DIBSTERYT/BrawlCDN.git"
+  },
+  "keywords": [
+    "CDN",
+    "brawlstars"
+  ],
+  "author": "DIBSTER",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DIBSTERYT/BrawlCDN/issues"
+  },
+  "homepage": "https://github.com/DIBSTERYT/BrawlCDN#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1"
+  }
+}
