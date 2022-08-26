@@ -5,6 +5,8 @@ Simple Content Delivery Network that will contain all Brawl Stars Assets. Source
 ## Credits:
 
 [Tweenky](https://github.com/heliocosta1337) for the backend code I got from [BrawlMaticCDN](https://github.com/brawlmatic/BrawlCDN).
+[Statscell](https://github.com/Statscell) for some image assets I got from [Brawl-Assets-V2](https://github.com/Statscell/Brawl-Assets-V2).
+[Bimi](https://github.com/Bimi05) for moral support.
 
 ## Sources
 
