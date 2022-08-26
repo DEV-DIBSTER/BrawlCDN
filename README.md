@@ -10,6 +10,8 @@ Simple Content Delivery Network that will contain all Brawl Stars Assets. Source
 
 [Bimi](https://github.com/Bimi05) for moral support.
 
+[Brawlify.com](https://brawlify.com) for already available CDN assets.
+
 ## Sources
 
 The assets here are gathered from various sources. The sources are:
