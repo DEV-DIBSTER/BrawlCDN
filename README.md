@@ -15,7 +15,7 @@ Simple Content Delivery Network that will contain all Brawl Stars Assets. Source
 The assets here are gathered from various sources. The sources are:
 
 - In Game Files.
-- Fankit.
+- [Official Brawl Stars Fankit](https://supr.cl/BrawlFanKitView).
 
 ### ⚠️ Information ⚠️
 
