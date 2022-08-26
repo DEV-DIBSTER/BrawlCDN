@@ -16,6 +16,7 @@ The assets here are gathered from various sources. The sources are:
 
 - In Game Files.
 - [Official Brawl Stars Fankit](https://supr.cl/BrawlFanKitView).
+- Brawl Stars Social Media.
 
 ### ⚠️ Information ⚠️
 
