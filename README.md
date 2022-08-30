@@ -8,7 +8,7 @@ Simple Content Delivery Network that will contain all Brawl Stars Assets. Source
 
 [Statscell](https://github.com/Statscell) for some image assets I got from [Brawl-Assets-V2](https://github.com/Statscell/Brawl-Assets-V2).
 
-[Bimi](https://github.com/Bimi05) for moral support.
+[Bimi](https://github.com/Bimi05) for moral support, and for Brawler Portraits.
 
 [Brawlify.com](https://brawlify.com) for already available CDN assets.
 
