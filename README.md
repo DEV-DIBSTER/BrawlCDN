@@ -1,6 +1,6 @@
 # BrawlCDN
 
-Simple Content Delivery Network that will contain all Brawl Stars Assets. Sources will be in game files, as well as the official Fankit & Socials.
+Simple Content Delivery Network that will contain all Brawl Stars Assets. Sources will be in game files, as well as the official Fankit & Socials. This is meant to help other developers with finding assets all in one place.
 
 ## Credits:
 
