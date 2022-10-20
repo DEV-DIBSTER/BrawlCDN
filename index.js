@@ -1,5 +1,6 @@
 const ExpressJS = require('express');
 const Configuration = require('./configuration/config.json');
+const Execute = require('child_process').exec;
 
 const App = ExpressJS();
 
@@ -19,6 +20,22 @@ App.get('*', (Request, Response) => {
 App.post('*', (Request, Response) => {
     Response.status(404).end();
 });
+
+setInterval(() => {
+        Execute(`git pull`, (error, stdout) => {
+            let response = (error || stdout);
+            if (!error) {
+                if (response.includes("Already up to date.")) {
+                    //console.log('Bot already up to date. No changes since last pull.');
+                } else {
+                    setTimeout(() => {
+                        process.exit();
+                    }, 1000);
+                };
+            };
+        });
+}, 30 * 1000);
+
 
 App.listen(Configuration.Port, () => {
     console.log(`Brawl Stars CDN is online and operating. Online at port ${Configuration.Port}.`);
