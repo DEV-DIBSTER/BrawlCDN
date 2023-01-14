@@ -1,8 +1,8 @@
-# BrawlCDN
+# BrawlCDN:
 
 Simple Content Delivery Network that will contain all Brawl Stars Assets. Sources will be in game files, as well as the official Fankit & Socials. This is meant to help other developers with finding assets all in one place.
 
-## Credits:
+# Credits:
 
 [Tweenky](https://github.com/heliocosta1337) for the backend code I got from [BrawlMaticCDN](https://github.com/brawlmatic/BrawlCDN).
 
@@ -12,7 +12,7 @@ Simple Content Delivery Network that will contain all Brawl Stars Assets. Source
 
 [Brawlify.com](https://brawlify.com) for already available CDN assets.
 
-## Sources
+# Sources
 
 The assets here are gathered from various sources. The sources are:
 
@@ -20,7 +20,7 @@ The assets here are gathered from various sources. The sources are:
 - [Official Brawl Stars Fankit](https://supr.cl/BrawlFanKitView).
 - Brawl Stars Social Media.
 
-### ⚠️ Information ⚠️
+# ⚠️ Information ⚠️
 
 This content is not affiliated with, endorsed, sponsored, or specifically approved by Supercell and Supercell is not responsible for it.
 For more information see [Supercell’s Fan Content Policy.](https://supercell.com/en/fan-content-policy/)
