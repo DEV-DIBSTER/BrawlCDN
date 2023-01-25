@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "4": "node scripts/FindMissingStarPowers.js",
-    "3": "node scripts/FindMissingGadgets.js",
+    "starPowers": "node public-scripts/FindMissingStarPowers.js",
+    "gadgets": "node public-scripts/FindMissingGadgets.js",
     "2": "node scripts/GetBrawlStatsCDN.js",
     "1": "node scripts/RemoveDuplicates.js"
   },
