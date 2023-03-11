@@ -35,8 +35,10 @@ Axios({
             if(YesOrNo.toLocaleLowerCase() == 'yes'){
 
                 Promise.all(NonDuplicates1.map(async(Gadgets) => {
-                    const FileLocation = Fs.createWriteStream(`./assets/Gadgets/${Gadgets}.png`);
                     https.get(`https://cdn.brawlstats.com/gadgets/${Gadgets}.png`, function (Response) {
+                        if(Response.statusCode != 200) return;
+
+                        const FileLocation = Fs.createWriteStream(`./assets/Gadgets/${Gadgets}.png`);
                         Response.pipe(FileLocation);
 
                         // After download finish.

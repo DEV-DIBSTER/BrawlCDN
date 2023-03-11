@@ -35,8 +35,11 @@ Axios({
             if(YesOrNo.toLocaleLowerCase() == 'yes'){
 
                 Promise.all(NonDuplicates1.map(async(StarPowers) => {
-                    const FileLocation = Fs.createWriteStream(`./assets/StarPowers/${StarPowers}.png`);
+
                     https.get(`https://cdn.brawlstats.com/star-powers/${StarPowers}.png`, function (Response) {
+                        if(Response.statusCode != 200) return;
+                        
+                        const FileLocation = Fs.createWriteStream(`./assets/StarPowers/${StarPowers}.png`);
                         Response.pipe(FileLocation);
 
                         // After download finish.
