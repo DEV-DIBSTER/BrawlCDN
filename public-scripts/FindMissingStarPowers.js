@@ -31,6 +31,7 @@ Axios({
     console.log(NonDuplicates2);
 
     if(NonDuplicates1.length != 0){
+
         AsktoDownload.question('Would you like to try and download the StarPowers? Please respond with Yes or No: ', (YesOrNo) => {
             if(YesOrNo.toLocaleLowerCase() == 'yes'){
 
@@ -48,16 +49,15 @@ Axios({
                             console.log(`Download File Complete: ${StarPowers}.png`);
                         });
                     });
-                })).then(Response => {
-                    AsktoDownload.close();
-                });
+                }));
             } else if (YesOrNo.toLowerCase() == 'no'){
                 console.log('File download is skipped.');
-
-                AsktoDownload.close();
             };
           });
+
     } else {
         console.log('No files to download!');
     };
+
+    AsktoDownload.close();
 });

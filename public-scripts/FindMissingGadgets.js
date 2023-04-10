@@ -47,16 +47,15 @@ Axios({
                             console.log(`Download File Complete: ${Gadgets}.png`);
                         });
                     });
-                })).then(Response => {
-                    AsktoDownload.close();
-                });
+                }));
+
             } else if (YesOrNo.toLowerCase() == 'no'){
                 console.log('File download is skipped.');
-
-                AsktoDownload.close();
             };
           });
     }  else {
         console.log('No files to download!');
     };
+
+    AsktoDownload.close();
 });
