@@ -36,7 +36,7 @@ Axios({
 
                 Promise.all(NonDuplicates1.map(async(Gadgets) => {
                     https.get(`https://cdn.brawlstats.com/gadgets/${Gadgets}.png`, function (Response) {
-                        if(Response.statusCode != 200) return;
+                        if(Response.statusCode != 200) return console.log('Remote server files not found!');
 
                         const FileLocation = Fs.createWriteStream(`./assets/Gadgets/${Gadgets}.png`);
                         Response.pipe(FileLocation);
