@@ -9,10 +9,7 @@ const AsktoDownload = require('readline').createInterface({
   });
 
 Axios({
-    url: "https://bsproxy.royaleapi.dev/v1/brawlers",
-    headers: {
-        "Authorization": "Bearer " + Config.Token
-    }
+    url: "https://api.brawlapi.com/v1/brawlers"
 }).then(async (Response) => {
     if(Response.status != 200) return;
 
@@ -38,50 +35,57 @@ Axios({
         AsktoDownload.question('Would you like to try and download the Brawler Assets? Please respond with Yes or No: ', (YesOrNo) => {
             if(YesOrNo.toLocaleLowerCase() == 'yes'){
 
-                Promise.all(NonDuplicates1.map(async(StarPowers) => {
-                    https.get(`https://cdn.brawlstats.com/star-powers/${StarPowers}.png`, function (Response) {
+                Promise.all(NonDuplicates1.map(async(IconId) => {
+                    const ImageURL = Response.data.list.find(Brawler => Brawler.id == IconId).imageUrl2;
+
+                    https.get(ImageURL, function (Response) {
                         if(Response.statusCode != 200) return console.log('Remote server files not found!');
                         
-                        const FileLocation = Fs.createWriteStream(`./assets/Brawler-Icons/${StarPowers}.png`);
+                        const FileLocation = Fs.createWriteStream(`./assets/Brawler-Icons/${IconId}.png`);
                         Response.pipe(FileLocation);
 
                         // After download finish.
                         FileLocation.on("finish", () => {
                             FileLocation.close();
-                            console.log(`Download File Complete: ${StarPowers}.png`);
+                            console.log(`Download File Complete: ${IconId}.png`);
                         });
                     });
                 }));
 
-                Promise.all(NonDuplicates2.map(async(StarPowers) => {
-                    https.get(`https://cdn.brawlstats.com/star-powers/${StarPowers}.png`, function (Response) {
+                Promise.all(NonDuplicates2.map(async(IconId) => {
+                    const ImageURL = Response.data.list.find(Brawler => Brawler.id == IconId).imageUrl;
+
+                    https.get(ImageURL, function (Response) {
                         if(Response.statusCode != 200) return console.log('Remote server files not found!');
                         
-                        const FileLocation = Fs.createWriteStream(`./assets/Brawler-Icons-2/${StarPowers}.png`);
+                        const FileLocation = Fs.createWriteStream(`./assets/Brawler-Icons-2/${IconId}.png`);
                         Response.pipe(FileLocation);
 
                         // After download finish.
                         FileLocation.on("finish", () => {
                             FileLocation.close();
-                            console.log(`Download File Complete: ${StarPowers}.png`);
+                            console.log(`Download File Complete: ${IconId}.png`);
                         });
                     });
                 }));
 
-                Promise.all(NonDuplicates3.map(async(StarPowers) => {
-                    https.get(`https://cdn.brawlstats.com/star-powers/${StarPowers}.png`, function (Response) {
+                Promise.all(NonDuplicates3.map(async(IconId) => {
+                    const ImageURL = Response.data.list.find(Brawler => Brawler.id == IconId).imageUrl3;
+
+                    https.get(ImageURL, function (Response) {
                         if(Response.statusCode != 200) return console.log('Remote server files not found!');
                         
-                        const FileLocation = Fs.createWriteStream(`./assets/Brawler-Pins/${StarPowers}.png`);
+                        const FileLocation = Fs.createWriteStream(`./assets/Brawler-Pins/${IconId}.png`);
                         Response.pipe(FileLocation);
 
                         // After download finish.
                         FileLocation.on("finish", () => {
                             FileLocation.close();
-                            console.log(`Download File Complete: ${StarPowers}.png`);
+                            console.log(`Download File Complete: ${IconId}.png`);
                         });
                     });
                 }));
+
             } else if (YesOrNo.toLowerCase() == 'no'){
                 console.log('File download is skipped.');
             };
@@ -89,6 +93,4 @@ Axios({
     } else {
         console.log('No files to download!');
     };
-
-    AsktoDownload.close();
 });

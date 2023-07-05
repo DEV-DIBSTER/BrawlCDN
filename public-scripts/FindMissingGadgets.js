@@ -56,6 +56,4 @@ Axios({
     }  else {
         console.log('No files to download!');
     };
-
-    AsktoDownload.close();
 });

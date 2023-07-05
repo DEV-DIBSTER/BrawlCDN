@@ -54,10 +54,7 @@ Axios({
                 console.log('File download is skipped.');
             };
           });
-
     } else {
         console.log('No files to download!');
     };
-
-    AsktoDownload.close();
 });
